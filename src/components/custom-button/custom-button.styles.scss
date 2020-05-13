@@ -1,0 +1,19 @@
+.custom-button {
+	cursor: pointer;
+	font-size: inherit;
+	font-family: inherit;
+	display: block;
+	padding: .8rem 2.4rem;
+	margin-left: auto;
+	background-color: var(--primary);
+	color: var(--primary-font);
+	border-radius: 20px;
+	border: 1px solid var(--bg);
+	transition: all 0.3s ease;
+
+	&:hover {
+		border: 1px solid var(--primary);
+		background-color: unset;
+		color: var(--primary);
+	}
+}

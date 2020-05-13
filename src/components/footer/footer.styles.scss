@@ -1,0 +1,32 @@
+footer {
+	background-color: var(--component-bg);
+
+	.flex {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.sitemap {
+		p {
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			margin-bottom: .5rem;
+		}
+
+		ul {
+			list-style: none;
+			li {
+				a {
+					text-decoration: none;
+					color: var(--primary);
+					transition: filter 0.3s ease;
+
+					&:hover {
+						filter: brightness(1.4);
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,29 @@
+.custom-textarea {
+	background-color: var(--bg);
+
+	margin-bottom: 2rem;
+
+	&__label {
+		display: block;
+		margin-bottom: 1rem;
+		font-size: 1.8rem;
+	}
+
+	&__textarea {
+		display: block;
+		width: 100%;
+		resize: none;
+		padding: 1rem;
+		font-size: inherit;
+		font-family: inherit;
+		border: none;
+		border-bottom: 1px solid var(--font);
+		border-radius: 3px;
+		transition: border-bottom 0.3s ease;
+		background-color: var(--textarea-bg);
+
+		&:focus {
+			border-bottom: 1px solid var(--primary);
+		}
+	}
+}

@@ -1,0 +1,28 @@
+.custom-input {
+	background-color: var(--bg);
+
+	margin-bottom: 2rem;
+
+	&__label {
+		display: block;
+		margin-bottom: 1rem;
+		font-size: 1.8rem;
+	}
+
+	&__input {
+		outline: none;
+		font-size: inherit;
+		font-family: inherit;
+		width: 100%;
+		display: block;
+		padding: 1rem;
+		border: none;
+		border-bottom: 1px solid var(--font);
+		transition: border-bottom 0.3s ease;
+		background-color: var(--input-bg);
+
+		&:focus {
+			border-bottom: 1px solid var(--primary);
+		}
+	}
+}
