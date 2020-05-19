@@ -1,5 +1,6 @@
 import firebase from 'firebase/app';
 import 'firebase/firestore';
+import { store } from 'react-notifications-component';
 
 import {
 	apiKey,
@@ -39,10 +40,39 @@ const firebaseConfig = {
 export const addEmailToList = async (email) => {
 	if (!email) return;
 	const emailRef = firestore.doc(`email-list/${email}`);
+	const emailSnapshot = await emailRef.get();
+	if (emailSnapshot.exists) {
+		return store.addNotification({
+			title: 'Chyba',
+			message: 'Váš email už je zaregistrovaný',
+			type: 'warning',
+			insert: 'top',
+			container: 'bottom-right',
+			animationIn: [ 'animated', 'fadeIn' ],
+			animationOut: [ 'animated', 'fadeOut' ],
+			dismiss: {
+				duration: 5000,
+				onScreen: true
+			}
+		});
+	}
 	try {
 		await emailRef.set({
 			email,
 			createAt: new Date()
+		});
+		store.addNotification({
+			title: 'Úspešne',
+			message: 'Váš email bol úspešne odoslaný',
+			type: 'success',
+			insert: 'top',
+			container: 'bottom-right',
+			animationIn: [ 'animated', 'fadeIn' ],
+			animationOut: [ 'animated', 'fadeOut' ],
+			dismiss: {
+				duration: 5000,
+				onScreen: true
+			}
 		});
 	} catch (error) {
 		console.log(error);

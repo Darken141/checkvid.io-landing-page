@@ -26,19 +26,6 @@ const IndexPage = () => {
 	const handleSendEmail = (e) => {
 		e.preventDefault();
 		if (EmailValidator.validate(email)) addEmailToList(email);
-		store.addNotification({
-			title: 'Úspešne',
-			message: 'Váš email bol úspešne odoslaný',
-			type: 'success',
-			insert: 'top',
-			container: 'bottom-right',
-			animationIn: [ 'animated', 'fadeIn' ],
-			animationOut: [ 'animated', 'fadeOut' ],
-			dismiss: {
-				duration: 5000,
-				onScreen: true
-			}
-		});
 		setEmail('');
 	};
 
