@@ -2,16 +2,16 @@ import firebase from 'firebase/app';
 import 'firebase/firestore';
 import { store } from 'react-notifications-component';
 
-import {
-	apiKey,
-	appId,
-	authDomain,
-	databaseURL,
-	measurementId,
-	messagingSenderId,
-	projectId,
-	storageBucket
-} from '../../env/index';
+// import {
+// 	apiKey,
+// 	appId,
+// 	authDomain,
+// 	databaseURL,
+// 	measurementId,
+// 	messagingSenderId,
+// 	projectId,
+// 	storageBucket
+// } from '../../env/index';
 
 // console.log(process.env.GATSBY_API_KEY);
 
