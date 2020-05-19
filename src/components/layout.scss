@@ -43,7 +43,7 @@ body {
 }
 
 .container {
-	padding: 5rem 1rem;
+	padding: 7rem 1rem;
 	max-width: 114rem;
 	margin: 0 auto;
 }
@@ -54,7 +54,7 @@ body {
 }
 
 .logo {
-	font-size: 3rem;
+	font-size: 2.8rem;
 	color: var(--primary);
 	text-decoration: none;
 	font-family: 'Poiret One', cursive;
@@ -82,11 +82,13 @@ h6 {
 	width: 100%;
 
 	.content {
+		max-width: 60rem;
 		h1 {
-			font-size: 3rem;
+			font-size: 4rem;
 		}
 
 		p {
+			font-size: 2rem;
 			opacity: .7;
 		}
 		p:last-of-type {
@@ -99,29 +101,16 @@ h6 {
 			background-color: var(--primary);
 			color: var(--primary-font);
 			border: 1px solid var(--bg);
-			padding: 1rem 3rem;
+			padding: 0.8rem 3rem;
 			border-radius: 20px;
+			box-shadow: 0 5px 1rem rgba(0, 0, 0, 0.1);
+
 			transition: all 0.3s ease;
 
 			&:hover {
 				color: var(--primary);
 				border: 1px solid var(--primary);
 				background-color: unset;
-			}
-		}
-
-		.social-media-container {
-			margin: 1rem 0;
-
-			a {
-				font-weight: bolder;
-				text-decoration: none;
-				color: var(--primary);
-				transition: filter 0.3s ease;
-
-				&:hover {
-					filter: brightness(1.4);
-				}
 			}
 		}
 
@@ -141,7 +130,7 @@ h6 {
 	}
 
 	.illustration {
-		width: 50%;
+		max-width: 42rem;
 
 		svg {
 			width: 100%;

@@ -8,10 +8,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
+import ReactNotification from 'react-notifications-component';
 
 import Header from './header/header';
 import Footer from './footer/footer';
 import './layout.scss';
+import 'react-notifications-component/dist/theme.css';
 
 const Layout = ({ children }) => {
 	const data = useStaticQuery(graphql`
@@ -29,6 +31,8 @@ const Layout = ({ children }) => {
 			<Header siteTitle={data.site.siteMetadata.title} />
 			<main>{children}</main>
 			<Footer />
+
+			<ReactNotification />
 		</div>
 	);
 };

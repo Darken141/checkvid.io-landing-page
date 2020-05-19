@@ -5,6 +5,7 @@ module.exports = {
 		author: `@coderkin`
 	},
 	plugins: [
+		`gatsby-env-variables`,
 		'gatsby-plugin-optimize-svgs',
 		{
 			resolve: `gatsby-plugin-google-analytics`,

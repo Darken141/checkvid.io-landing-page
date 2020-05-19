@@ -1,43 +1,69 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'gatsby';
+import EmailValidator from 'email-validator';
+
+import { addEmailToList } from '../firebase/firebase.utils';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import HeroIllu from '../images/hero_illu.svg';
+import CustomInput from '../components/custom-input/custom-input';
+import { store } from 'react-notifications-component';
 
-const IndexPage = () => (
-	<Layout>
-		<SEO title="Domovská stránka" />
-		<section id="hero" className="container">
-			<div className="content">
-				<h1>Stránka je aktuálne vo výstavbe</h1>
-				<p>Software ktorý ti umožní efektivne zberať odozvu od tvojich klientov.</p>
-				<p>Máš záujem?</p>
-				<Link className="cta" to="/contact">
-					Napiš nám
-				</Link>
-				<div className="social-media-container">
+const IndexPage = () => {
+	const [ email, setEmail ] = useState('');
+
+	const emailInput = {
+		label: 'Váš email: (*)',
+		name: 'email',
+		type: 'email',
+		placeholder: 'example@email.com',
+		value: email,
+		handleChange: (e) => setEmail(e.target.value),
+		isRequired: true
+	};
+
+	const handleSendEmail = (e) => {
+		e.preventDefault();
+		if (EmailValidator.validate(email)) addEmailToList(email);
+		store.addNotification({
+			title: 'Úspešne',
+			message: 'Váš email bol úspešne odoslaný',
+			type: 'success',
+			insert: 'top',
+			container: 'bottom-right',
+			animationIn: [ 'animated', 'fadeIn' ],
+			animationOut: [ 'animated', 'fadeOut' ],
+			dismiss: {
+				duration: 5000,
+				onScreen: true
+			}
+		});
+		setEmail('');
+	};
+
+	return (
+		<Layout>
+			<SEO title="Domovská stránka" />
+			<section id="hero" className="container">
+				<div className="content">
+					<h1>Video software pre zber odozvy.</h1>
 					<p>
-						alebo sleduj novinky na{' '}
-						<a
-							href="https://www.facebook.com/CheckVidio-102042618125958"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							Facebook-u
-						</a>{' '}
-						a{' '}
-						<a href="https://www.instagram.com/checkvid.io/" target="_blank" rel="noopener noreferrer">
-							Instagram-e
-						</a>
+						Checkvid.io ti umožní efektivne zberať feedback od tvojich klientov a tým ti zjednodušiť prácu.
 					</p>
+					<div>
+						<CustomInput {...emailInput} />
+						<div className="cta" onClick={(e) => handleSendEmail(e)}>
+							CHCEM BYŤ INFORMOVANÝ
+						</div>
+					</div>
 				</div>
-			</div>
-			<div className="illustration">
-				<HeroIllu />
-			</div>
-		</section>
-	</Layout>
-);
+				<div className="illustration">
+					<HeroIllu />
+				</div>
+			</section>
+		</Layout>
+	);
+};
 
 export default IndexPage;

@@ -26,6 +26,23 @@ const Footer = () => {
 						</li>
 					</ul>
 				</div>
+
+				<div className="social-media-container">
+					<p>
+						Sleduj novinky na:{' '}
+						<a
+							href="https://www.facebook.com/CheckVidio-102042618125958"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							Facebook-u
+						</a>{' '}
+						a{' '}
+						<a href="https://www.instagram.com/checkvid.io/" target="_blank" rel="noopener noreferrer">
+							Instagram-e
+						</a>
+					</p>
+				</div>
 				<div>
 					© {new Date().getFullYear()}{' '}
 					<a id="coderkin" href="https://www.coderkin.com">

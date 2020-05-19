@@ -5,6 +5,30 @@ footer {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+
+		@media screen and (max-width: 760px) {
+			flex-direction: column;
+			text-align: center;
+
+			div:not(last-child) {
+				margin-bottom: 5rem;
+			}
+		}
+	}
+
+	.social-media-container {
+		margin: 1rem 0;
+
+		a {
+			font-weight: bolder;
+			text-decoration: none;
+			color: var(--primary);
+			transition: filter 0.3s ease;
+
+			&:hover {
+				filter: brightness(1.4);
+			}
+		}
 	}
 
 	.sitemap {
