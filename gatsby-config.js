@@ -1,7 +1,7 @@
 module.exports = {
 	siteMetadata: {
 		title: `CheckVid.io`,
-		description: `Software pre konzultaciu vašich videi s klientami zberaním odozvy a zlepšenia vašich služieb`,
+		description: `Software pre konzultáciu vašich videí s klientmi zberaním odozvy a zlepšenia vašich služieb`,
 		author: `@coderkin`
 	},
 	plugins: [
