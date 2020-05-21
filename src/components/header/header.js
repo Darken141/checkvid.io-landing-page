@@ -16,9 +16,18 @@ const Header = ({ siteTitle }) => (
 			<nav className="navbar">
 				<ul className="navbar-nav">
 					<li className="navbar-nav__item">
-						<Link to="/contact" className="cta">
-							Kontakt
-						</Link>
+						<Link to="/contact">Kontakt</Link>
+					</li>
+
+					<li className="navbar-nav__item">
+						<a
+							href="https://www.app.checkvid.io/video/Pp9ZkN7XrLupbUu7Fdsx"
+							className="cta"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							Vyskúšať
+						</a>
 					</li>
 				</ul>
 			</nav>

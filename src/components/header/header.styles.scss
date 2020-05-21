@@ -37,10 +37,11 @@
 				.cta {
 					background-color: var(--primary);
 					color: var(--primary-font);
-					padding: 0.8rem 2rem;
+					padding: 1rem 2.5rem;
 					border: 1px solid var(--component-bg);
 					border-radius: 20px;
 					box-shadow: 0 5px 1rem rgba(0, 0, 0, 0.1);
+					text-transform: uppercase;
 
 					&:hover {
 						background-color: unset;

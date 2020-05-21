@@ -13,6 +13,16 @@ import { store } from 'react-notifications-component';
 // 	storageBucket
 // } from '../../env/index';
 
+// const firebaseConfig = {
+// 	apiKey: apiKey,
+// 	authDomain: authDomain,
+// 	databaseURL: databaseURL,
+// 	projectId: projectId,
+// 	storageBucket: storageBucket,
+// 	messagingSenderId: messagingSenderId,
+// 	appId: appId,
+// 	measurementId: measurementId
+// };
 // console.log(process.env.GATSBY_API_KEY);
 
 const firebaseConfig = {
@@ -25,17 +35,6 @@ const firebaseConfig = {
 	appId: process.env.GATSBY_APP_ID,
 	measurementId: process.env.GATSBY_MEASUREMENT_ID
 };
-
-// const firebaseConfig = {
-// 	apiKey: apiKey,
-// 	authDomain: authDomain,
-// 	databaseURL: databaseURL,
-// 	projectId: projectId,
-// 	storageBucket: storageBucket,
-// 	messagingSenderId: messagingSenderId,
-// 	appId: appId,
-// 	measurementId: measurementId
-// };
 
 export const addEmailToList = async (email) => {
 	if (!email) return;

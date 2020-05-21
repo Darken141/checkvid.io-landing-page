@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Link } from 'gatsby';
 import EmailValidator from 'email-validator';
 
 import { addEmailToList } from '../firebase/firebase.utils';
@@ -8,7 +7,6 @@ import Layout from '../components/layout';
 import SEO from '../components/seo';
 import HeroIllu from '../images/hero_illu.svg';
 import CustomInput from '../components/custom-input/custom-input';
-import { store } from 'react-notifications-component';
 
 const IndexPage = () => {
 	const [ email, setEmail ] = useState('');
