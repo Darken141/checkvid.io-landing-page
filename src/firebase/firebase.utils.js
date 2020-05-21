@@ -38,7 +38,7 @@ const firebaseConfig = {
 
 export const addEmailToList = async (email) => {
 	if (!email) return;
-	const emailRef = firestore.doc(`email-list/${email}`);
+	const emailRef = firestore.doc(`emails/${email}`);
 	const emailSnapshot = await emailRef.get();
 	if (emailSnapshot.exists) {
 		return store.addNotification({
