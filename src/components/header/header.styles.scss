@@ -12,6 +12,16 @@
 		padding: 0 1rem;
 	}
 
+	.lang-icons {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		p {
+			cursor: pointer;
+			margin: 1rem;
+		}
+	}
+
 	.navbar {
 		display: flex;
 		align-items: center;

@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { HeroSectionContext } from '../context/Hero-section';
 import EmailValidator from 'email-validator';
 
 import { addEmailToList } from '../firebase/firebase.utils';
@@ -10,6 +11,7 @@ import CustomInput from '../components/custom-input/custom-input';
 
 const IndexPage = () => {
 	const [ email, setEmail ] = useState('');
+	const { SEOTitle, heading, subHeading, CTA } = useContext(HeroSectionContext);
 
 	const emailInput = {
 		label: 'Váš email: (*)',
@@ -29,18 +31,16 @@ const IndexPage = () => {
 
 	return (
 		<Layout>
-			<SEO title="Domovská stránka" />
+			<SEO title={SEOTitle} />
 			<section id="hero" className="container">
 				<div className="content">
-					<h1>Video software pre zber odozvy.</h1>
-					<p>
-						Checkvid.io ti umožní efektivne zberať feedback od tvojich klientov a tým ti zjednodušiť prácu.
-					</p>
+					<h1>{heading}</h1>
+					<p>{subHeading}</p>
 					<div>
 						<CustomInput {...emailInput} />
-						<div className="cta" onClick={(e) => handleSendEmail(e)}>
-							CHCEM BYŤ INFORMOVANÝ
-						</div>
+						<button className="cta" onClick={(e) => handleSendEmail(e)}>
+							{CTA}
+						</button>
 					</div>
 				</div>
 				<div className="illustration">

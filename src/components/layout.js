@@ -6,6 +6,7 @@
  */
 
 import React from 'react';
+import { HeroSectionProvider } from '../context/Hero-section';
 import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
 import ReactNotification from 'react-notifications-component';
@@ -27,13 +28,15 @@ const Layout = ({ children }) => {
 	`);
 
 	return (
-		<div className="content-container">
-			<Header siteTitle={data.site.siteMetadata.title} />
-			<main>{children}</main>
-			<Footer />
+		<HeroSectionProvider>
+			<div className="content-container">
+				<Header siteTitle={data.site.siteMetadata.title} />
+				<main>{children}</main>
+				<Footer />
 
-			<ReactNotification />
-		</div>
+				<ReactNotification />
+			</div>
+		</HeroSectionProvider>
 	);
 };
 

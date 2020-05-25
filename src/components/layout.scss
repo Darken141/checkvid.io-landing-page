@@ -99,12 +99,14 @@ h6 {
 
 		.cta {
 			cursor: pointer;
+			font-weight: inherit;
+			font-size: inherit;
 			text-decoration: none;
 			display: inline-block;
 			background-color: var(--primary);
 			color: var(--primary-font);
 			border: 1px solid var(--bg);
-			padding: 0.8rem 3rem;
+			padding: 1rem 3rem;
 			border-radius: 20px;
 			box-shadow: 0 5px 1rem rgba(0, 0, 0, 0.1);
 
