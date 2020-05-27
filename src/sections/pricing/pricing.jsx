@@ -33,7 +33,7 @@ const PricingSection = () => {
 					</a>
 				</div>
 				<div className="pricing__container ">
-					<h3 className="pricing__container--title">Biznis!</h3>
+					<h3 className="pricing__container--title">Biznis</h3>
 					<p className="pricing__container--price">??-€</p>
 					<ul className="pricing__container--benefits">
 						<li>Free</li>
