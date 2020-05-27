@@ -1,0 +1,47 @@
+#partners {
+	// background-color: rgba(#fff, 0.5);
+	background: radial-gradient(#fff, #eee);
+	box-shadow: 10px 10px 1rem 0 rgba(#000, 0.01), -10px -10px 1rem 0 rgba(#fff, 0.5);
+	margin: 5rem auto;
+	border-radius: 15px;
+
+	.heading {
+		text-align: center;
+		text-transform: uppercase;
+		font-weight: bolder;
+	}
+
+	.partners__container {
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		flex-wrap: wrap;
+
+		svg {
+			width: 10rem;
+			margin: 3rem;
+			filter: grayscale(1);
+			opacity: 0.3;
+			transition: all 0.3s ease;
+
+			&:hover {
+				filter: grayscale(0);
+				opacity: 1;
+			}
+		}
+	}
+
+	.support-us__link {
+		text-align: center;
+		display: block;
+		color: black;
+		opacity: 0.5;
+		transition: opacity 0.3s ease;
+		text-transform: uppercase;
+		text-decoration: none;
+
+		&:hover {
+			opacity: .9;
+		}
+	}
+}

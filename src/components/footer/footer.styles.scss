@@ -1,5 +1,8 @@
 footer {
 	background-color: var(--component-bg);
+	position: relative;
+	z-index: 99;
+	// margin-top: 50rem;
 
 	.flex {
 		display: flex;

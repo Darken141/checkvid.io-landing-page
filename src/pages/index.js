@@ -8,6 +8,8 @@ import Layout from '../components/layout';
 import SEO from '../components/seo';
 import HeroIllu from '../images/hero_illu.svg';
 import CustomInput from '../components/custom-input/custom-input';
+import PartnersSection from '../sections/partners/partners';
+import FeaturesSection from '../sections/features/features';
 
 const IndexPage = () => {
 	const [ email, setEmail ] = useState('');
@@ -47,6 +49,8 @@ const IndexPage = () => {
 					<HeroIllu />
 				</div>
 			</section>
+			<PartnersSection />
+			<FeaturesSection />
 		</Layout>
 	);
 };
