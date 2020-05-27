@@ -30,11 +30,20 @@
 		p {
 			opacity: 0.6;
 		}
+
+		@media screen and (max-width: 575px) {
+			position: relative;
+			padding: 2rem;
+			// margin: 0 2rem 7rem;
+		}
 	}
 
 	.reverse {
 		right: 0;
 		bottom: 30rem;
+		@media screen and (max-width: 575px) {
+			bottom: 0;
+		}
 	}
 
 	.illustration {
@@ -42,5 +51,9 @@
 		height: auto;
 		position: relative;
 		margin: 10rem 0;
+
+		@media screen and (max-width: 575px) {
+			margin: 0;
+		}
 	}
 }
