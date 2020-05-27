@@ -10,6 +10,7 @@ import HeroIllu from '../images/hero_illu.svg';
 import CustomInput from '../components/custom-input/custom-input';
 import PartnersSection from '../sections/partners/partners';
 import FeaturesSection from '../sections/features/features';
+import PricingSection from '../sections/pricing/pricing';
 
 const IndexPage = () => {
 	const [ email, setEmail ] = useState('');
@@ -51,6 +52,7 @@ const IndexPage = () => {
 			</section>
 			<PartnersSection />
 			<FeaturesSection />
+			<PricingSection />
 		</Layout>
 	);
 };
