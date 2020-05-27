@@ -98,6 +98,15 @@ h6 {
 			margin-bottom: 2rem;
 		}
 
+		.email-form {
+			max-width: 40rem;
+
+			@media screen and (max-width: 830px) {
+				// max-width: unset;
+				margin: 0 auto;
+			}
+		}
+
 		.cta {
 			cursor: pointer;
 			font-weight: inherit;

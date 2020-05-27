@@ -39,7 +39,7 @@ const IndexPage = () => {
 				<div className="content">
 					<h1>{heading}</h1>
 					<p>{subHeading}</p>
-					<div>
+					<div className="email-form">
 						<CustomInput {...emailInput} />
 						<button className="cta" onClick={(e) => handleSendEmail(e)}>
 							{CTA}
